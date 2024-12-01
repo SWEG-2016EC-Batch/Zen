@@ -31,3 +31,7 @@
 7. If any number entered except zero goto line 2
 
 8. If zero is entered end the program
+
+## Flowchart 
+
+![image aly](https://raw.githubusercontent.com/SWEG-2016EC-Batch/Zen/f56fd49a9e4dbdc109708e7c2ebc4bc04e2e79b2/ETS1315_Suheil_Ali/BMI2.jpg)
