@@ -34,4 +34,4 @@
 
 ## Flowchart 
 
-![image aly](https://raw.githubusercontent.com/SWEG-2016EC-Batch/Zen/f56fd49a9e4dbdc109708e7c2ebc4bc04e2e79b2/ETS1315_Suheil_Ali/BMI2.jpg)
+![image aly](https://raw.githubusercontent.com/SWEG-2016EC-Batch/Zen/70d1422a1183bc8b07873e54eee5077135623729/ETS1315_Suheil_Ali/BMI1.jpg)
