@@ -24,4 +24,4 @@
      
      ## Flow chart
      
-     
+     ![image alt](https://github.com/SWEG-2016EC-Batch/Zen/blob/main/ETS1315_Suheil_Ali/Power1.jpg?raw=true)
