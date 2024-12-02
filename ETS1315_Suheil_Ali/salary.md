@@ -52,4 +52,4 @@
       
       ## Flowchart
       
-      
+      ![image alt](https://github.com/SWEG-2016EC-Batch/Zen/blob/main/ETS1315_Suheil_Ali/salary.jpg?raw=true)
