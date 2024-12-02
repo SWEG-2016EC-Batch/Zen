@@ -1,1 +1,40 @@
 
+#include <iostream>
+#include <cmath> 
+using namespace std;
+
+int main() {
+    float weight, height, BMI;
+    char choice;
+
+    do {
+        cout << "Enter Your weight in (Kg): ";
+        while (!(cin >> weight) || weight <= 0) { 
+            cout << "Invalid input. Please enter a positive number for weight: ";
+            cin.clear(); 
+            cin.ignore(); 
+        }
+
+        cout << "Enter Your height in meters: ";
+        while (!(cin >> height) || height <= 0) { 
+            cout << "Invalid input. Please enter a positive number for height: ";
+            cin.clear(); 
+            cin.ignore(); 
+        }
+
+        BMI = weight / (height * height);
+        cout << "Your Body Mass Index is " << BMI << " Kg/m²" << endl;
+
+        if (BMI < 18.5) {
+            cout << "You are under-weight" << endl;
+        } else if (BMI < 24.9) { 
+            cout << "You are normal weight" << endl;
+        } else {
+            cout << "You are over-weight" << endl;
+        }
+
+        cout << "Do you want to calculate BMI for another person? (y/n): ";
+        cin >> choice;
+    } while (choice == 'y' || choice == 'Y');
+
+    return 0;
