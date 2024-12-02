@@ -22,4 +22,4 @@
      
      ## Flow chart
      
-     
+     ![image alt ](https://raw.githubusercontent.com/SWEG-2016EC-Batch/Zen/6f65a5a0540792f80f76ddce50327000fedd4342/ETS1315_Suheil_Ali/Automobile_miles.jpg)
