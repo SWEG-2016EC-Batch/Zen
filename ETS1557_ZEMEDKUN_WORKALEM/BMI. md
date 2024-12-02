@@ -1,1 +1,29 @@
+pseudo code 
+1.	Start
+
+2.	Read weight as w.
+
+3.	Read height as h.
+
+4.	Calculate BMI as w/(h*h)
+
+5.	If the user inserts negative value or 0 or other input other than number, then go to step 2.
+
+6.	Else proceed to the next.
+
+7.	Print BMI
+
+8.	If BMI < 18.5, print You are underweight.
+
+9.	If 18.5 <= BMI <= 24.5, print You are normal weight.
+
+10.	If BMI > 24.5, print You are overweight.
+
+11.	Do you want to calculate BMI for another person? (yes/no). 
+
+12.	Yes, go to step 2.
+
+13.	No, go to step 14.
+
+14.	End.
 
