@@ -33,5 +33,6 @@
 8. If zero is entered end the program
    
    ## Flowchart
-   
+
+   ![image alt](https://github.com/SWEG-2016EC-Batch/Zen/blob/main/ETS1315_Suheil_Ali/BMII.jpg?raw=true)
    
