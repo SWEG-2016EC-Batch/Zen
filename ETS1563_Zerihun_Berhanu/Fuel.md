@@ -1,6 +1,6 @@
 ## Problem Analysis
 Input: Volume of fuel tank, number of mile per gallon.  
-Operation: Total distance coverage = volume of fuel tank * number of mile per gallon.
+Operation: Total distance coverage = volume of fuel tank * number of mile per gallon.  
 Output: Total disatance coverage.
 ## Psuedocode
 1.	Start 
