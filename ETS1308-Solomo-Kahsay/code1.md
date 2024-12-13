@@ -144,8 +144,66 @@
 3. Check if the number isn't zero ( if it's zero print unknown digit) 
 4. Else count the number of digits by dividing a number by 10 until you get the quoeit zero and update the count for each itiration
 5.  Print the number of digits the number has
-6.  End the program 
+6.  End the program
+
+
+## C)
+# Problem Analysis
+
+## Input 
+
+* number
   
+## Process
+
+* counting a digit
+* checking the even digit
+* performig the product on the even digit
+## Output
+
+* the even digit
+* the produt of the even digit
+
+# Pseudocode
+
+1. Start the program
+2. Declare and intialize the variables
+3. Prompt the user to enter a number
+4. Count a digit and check the even one
+5. Performing a product on the even digit and stored at a variable product
+6. Print the even and the product of the given digits
+7. End the program
+   
+## D)
+
+# Problem Analysis
+
+## Input 
+
+* number
+
+## Process
+
+* finding the first and last digit
+* performing their sum
+* checking the number is negative and grater than 10
+
+## Output
+
+* displaying the first and the last digit of a given number
+* print the sum of the the digits( first and last)
+  
+# Pseudocoed
+
+1. Start the program
+2. Declaretion and intialization
+3. checking the number if it is negative and greater than 10
+4. Finding the first and the last digit of a number
+5. Performing sum as sum = first digit + last digit
+6. Print the firt, last digit, and sum
+7. End the program
+
+
 
 
 
