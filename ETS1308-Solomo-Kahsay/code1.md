@@ -205,6 +205,122 @@
 
 
 
+## E)
+
+# Problem Analysis
+
+## Input 
+
+* number
+
+## Operation
+
+* last digit, number of digits, divisor, divisor, remaining number, swapped number.
+## Output
+
+* swapped number
+  
+# Pseudocode
+1. Start the program
+2. Declaretion of the variables
+3. Prompt the user to enter the number
+4. Finding; last digit, number of digits, divisor, divisor, remaining number, swapped numbe
+5. Print the swapped number
+6. End the program
+   
+## F)
+
+# Problem Analysis
+
+## Input
+* number
+
+## operation
+* finding the reversed number and checking if it's equal with the orginal number
+
+## Output
+*  print the given number and the result for the number is palindrome or not
+  
+# Pseudocode
+1. Start the program
+2. Declaration and intialization
+3. Prompt the user to enter a number
+4. Finding the reversed number
+5. Checking if the reversed number is equal to the orginal number
+6. If it's true the number is palindrome
+7. Else the number isn't palindrome
+8. End the program
+
+## G)
+
+# Problem Analysis
+
+## Input
+* number
+
+## Operation
+
+* calculatint the frequency of each digit
+
+## Output
+
+* prit the digits with their corresponding frequency
+  
+# Pseudocode
+1. Start the program
+2. Declare all the variables
+3. Prompt the user to enter the number
+4. Finding the frequency of each digit
+5. Print the the digits ans their frequencies
+6. End the program
+   
+## H)
+
+# Problem Analysis
+
+## Input
+* number
+
+## Operation
+* calculatint the factorial of each digits
+* check if the sum of the factorial is equal to the number
+## Output
+* print whether the number is stong or not
+
+# Pseudocoe
+
+1. Start the program
+2. Declaration of the variables
+3. Creating a function to calculate the factorial of each digits
+4. Calculate the factorial of each digits and their sum
+5. Checking the sum of the factorial with the original number
+6. If they are equal the number is a strong number
+7. Else the number is not strong number
+8. End the program
+
+## I)
+# Problem Analysis
+
+## Input
+* number
+## process
+* calculatint the sum of all proper divisors
+* checking the sum of the divisors with the number itself
+  
+## Output
+* print the wether the number is perfect or not
+
+# Pseduocode
+1. Start the program
+2. Declare the variables
+3. Calculate the sum of each proper divisors
+4. Check the sum with the original nume
+5. If the sum and the number are equal the number is perfect number 
+6. Else the number is not perfect number
+7. End the program 
+
+
+
 
 
 
