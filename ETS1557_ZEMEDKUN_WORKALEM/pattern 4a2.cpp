@@ -2,19 +2,13 @@
 using namespace std;
 
 int main() {
-    int n = 6; // Fixed size of the pyramid
+    int n ; 
+    char letter = 'A'; // Starting letter
 
-    for (int row = 1; row <= n; row++) {
-        for (int col = 1; col <= n - row; col++) {
-            cout << " ";
-        }
- 
-        for (int col = 1; col <= row; col++) {
-            if (col == 1 || col == row || row == n) { 
-                cout << "* ";
-            } else {
-                cout << "  "; 
-            }
+    for (int row = 1; row <= 4; row++) {
+        for (int col = 1; col <= 6; col++) {
+            cout << letter;
+            letter++;
         }
         cout << endl;
     }
