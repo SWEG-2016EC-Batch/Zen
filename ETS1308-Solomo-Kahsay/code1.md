@@ -193,7 +193,7 @@
 * displaying the first and the last digit of a given number
 * print the sum of the the digits( first and last)
   
-# Pseudocoed
+# Pseudocode
 
 1. Start the program
 2. Declaretion and intialization
