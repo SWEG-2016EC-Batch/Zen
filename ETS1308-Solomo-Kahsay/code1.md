@@ -1,3 +1,5 @@
+### Markdown a great program to code your algorithm desing in a better way 
+#### When I see my first algorithm 😁🤦‍♂️
 # Algorithm Design
 
 # Q1
