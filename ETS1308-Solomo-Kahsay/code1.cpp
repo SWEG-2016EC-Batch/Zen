@@ -208,3 +208,82 @@ cout << "Calcualting the mark and grade." << endl;
 
 return 0;
 }
+
+
+// questiont number 3
+
+
+//  A 
+// finding the reverse of the given number
+
+#include <iostream>
+using namespace std;
+
+
+
+int main ()
+{
+        int num, reversenum = 0; // declare and intialize the variables
+
+        cout << "Enter the number: "; // prompt the user to input the number
+        cin >> num;
+        if ( num % 10 == 0)
+        {
+            cout << "The given number hasn't a reversed form.";
+        }
+
+        else
+        {
+
+        while ( num != 0) // checking the number is not zero
+        {
+            int digit = num % 10; // finding the remender after diving by 10
+
+            reversenum = reversenum * 10 + digit; // updating the reverse number
+            num /= 10;
+
+        }
+        cout << "The reversed number is: " << reversenum; // print the resersed number
+        }
+
+        
+
+    return 0;
+}
+
+
+
+//  B 
+//couting the number of digits of a number
+
+
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int num, count = 0; // declaretion and intialization
+    cout << "Enter a number: "; // prompt the user to enter a number
+    cin >> num;
+
+    if ( num == 0) // check the number is zero because we can have infinte zeros
+    {
+        cout << "Unknow digist number.";
+    }
+    else 
+    {
+        if ( num < 0) // considering negative numbers
+        { num = -num;}
+        do
+        {
+            num /= 10;
+            count++; // counting how many time we make the division
+        } while (num != 0); // checking condition num = 0, means we finishe the digit of the number
+
+        
+    }
+    cout << "The digit of a given number is: " << count; // printing the digit
+
+    return 0;
+}
+
