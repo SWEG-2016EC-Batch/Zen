@@ -1,1 +1,146 @@
+BEGIN
+    DECLARE num, temp, digit, rev, count, sum, prod, first, last, newNum, numDigits, firstMultiplier, freq, armstrongSum, strongSum, perfectSum AS INTEGER
+    DECLARE foundEven AS BOOLEAN
 
+    // Read the number
+    PRINT "Enter a number: "
+    INPUT num
+    temp = num
+
+    // Reverse of the number
+    rev = 0
+    WHILE temp > 0 DO
+        digit = temp % 10
+        rev = rev * 10 + digit
+        temp = temp / 10
+    END WHILE
+    PRINT "Reverse of the number: ", rev
+
+    // Number of digits
+    count = 0
+    temp = num
+    WHILE temp > 0 DO
+        count = count + 1
+        temp = temp / 10
+    END WHILE
+    PRINT "Number of digits: ", count
+
+    // Sum of digits
+    sum = 0
+    temp = num
+    WHILE temp > 0 DO
+        digit = temp % 10
+        sum = sum + digit
+        temp = temp / 10
+    END WHILE
+    PRINT "Sum of digits: ", sum
+
+    // Product of even digits
+    prod = 1
+    foundEven = FALSE
+    temp = num
+    WHILE temp > 0 DO
+        digit = temp % 10
+        IF digit % 2 == 0 THEN
+            prod = prod * digit
+            foundEven = TRUE
+        END IF
+        temp = temp / 10
+    END WHILE
+    IF foundEven THEN
+        PRINT "Product of even digits: ", prod
+    ELSE
+        PRINT "No even digits found."
+    END IF
+
+    // First and last digit
+    first = -1
+    last = num % 10
+    temp = num
+    WHILE temp > 0 DO
+        digit = temp % 10
+        first = digit
+        temp = temp / 10
+    END WHILE
+    PRINT "First and last digit: ", first, " and ", last
+
+    // Swap first and last digit
+    newNum = num
+    numDigits = LOG10(num) + 1
+    firstMultiplier = POW(10, numDigits - 1)
+    newNum = newNum - first * firstMultiplier - last + last * firstMultiplier + first
+    PRINT "Number after swapping first and last digit: ", newNum
+
+    // Palindrome
+    rev = 0
+    temp = num
+    WHILE temp > 0 DO
+        digit = temp % 10
+        rev = rev * 10 + digit
+        temp = temp / 10
+    END WHILE
+    IF rev == num THEN
+        PRINT num, " is a palindrome."
+    ELSE
+        PRINT num, " is not a palindrome."
+    END IF
+
+    // Frequency of first digit
+    freq = 0
+    temp = num
+    WHILE temp > 0 DO
+        digit = temp % 10
+        IF digit == first THEN
+            freq = freq + 1
+        END IF
+        temp = temp / 10
+    END WHILE
+    PRINT "Frequency of first digit (", first, "): ", freq
+
+    // Armstrong number
+    armstrongSum = 0
+    numDigits = LOG10(num) + 1
+    temp = num
+    WHILE temp > 0 DO
+        digit = temp % 10
+        armstrongSum = armstrongSum + POW(digit, numDigits)
+        temp = temp / 10
+    END WHILE
+    IF armstrongSum == num THEN
+        PRINT num, " is an Armstrong number."
+    ELSE
+        PRINT num, " is not an Armstrong number."
+    END IF
+
+    // Strong number
+    strongSum = 0
+    temp = num
+    WHILE temp > 0 DO
+        digit = temp % 10
+        factorial = 1
+        FOR i = 1 TO digit DO
+            factorial = factorial * i
+        END FOR
+        strongSum = strongSum + factorial
+        temp = temp / 10
+    END WHILE
+    IF strongSum == num THEN
+        PRINT num, " is a Strong number."
+    ELSE
+        PRINT num, " is not a Strong number."
+    END IF
+
+    // Perfect number
+    perfectSum = 0
+    FOR i = 1 TO num / 2 DO
+        IF num % i == 0 THEN
+            perfectSum = perfectSum + i
+        END IF
+    END FOR
+    IF perfectSum == num THEN
+        PRINT num, " is a Perfect number."
+    ELSE
+        PRINT num, " is not a Perfect number."
+    END IF
+
+END
