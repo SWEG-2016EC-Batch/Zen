@@ -101,6 +101,50 @@
        *  quiz, test, project, assignment, final exam, and total result
        *  the grade letter for the given total result
    5. End the program
+
+
+
+  # Q3
+
+## A)
+# Problem Analysis
+
+## Input
+* number
+## process
+ * check if a number is divisble by 10 if true the number will not have a reversed form
+ * if it's not divisible by 10, find the remenders and store it  on the reverse number until you finish the number
+## Output
+  * resered number
+ # pseudocode
+  1.  Start the program
+  2.  Declare and intialize the variables
+  3.  Prompt the user to enter a number
+  4.  If number is divisible by 10 print the number hasn't a reversed form
+  5.  else 
+      * find the remender of a number divided by 10
+      * update ther ther reversed number as: reversed number = reversed number * 10 + remender
+      * update the number as number = number / 10 (integer  value), work until the number be 0;
+  6. Print the reversed number
+  7. End the program
+
+
+## B
+# Problem Analysis
+## Input
+ * number
+## Process
+ * check if the number is 0 or not, if 0 unknown digit
+ * else intialize the count to 0 and count the number of times the number is divisible by ten until the quoient is 0 and ther remener is the number itself
+## Output
+ * print the number of digits the given number has
+# Pseudocode
+1. Start the program
+2. Prompt the user to enter a number and intialze the count to zero
+3. Check if the number isn't zero ( if it's zero print unknown digit) 
+4. Else count the number of digits by dividing a number by 10 until you get the quoeit zero and update the count for each itiration
+5.  Print the number of digits the number has
+6.  End the program 
   
 
 
