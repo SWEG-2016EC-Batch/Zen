@@ -2,19 +2,10 @@
 using namespace std;
 
 int main() {
-    int n = 6; // Fixed size of the pyramid
-
+    int n = 5; 
     for (int row = 1; row <= n; row++) {
-        for (int col = 1; col <= n - row; col++) {
-            cout << " ";
-        }
- 
-        for (int col = 1; col <= row; col++) {
-            if (col == 1 || col == row || row == n) { 
-                cout << "* ";
-            } else {
-                cout << "  "; 
-            }
+        for (int col = 1; col <= n; col++) {
+            cout << char('1' + col - 1);
         }
         cout << endl;
     }
