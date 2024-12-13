@@ -371,3 +371,190 @@ int main ()
 
 } 
 
+
+
+// E
+// swappint the first and last digit of a given number
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main ()
+{
+
+
+    int num, firstDigit, lastDigit, numDigits, divisor, swappedNum;
+
+    cout << "Enter a number: ";
+    cin >> num;
+
+    lastDigit = num % 10; // Get the last digit
+
+    numDigits = log10(num); // Get the number of digits - 1
+    divisor = pow(10, numDigits); // Calculate the divisor 
+
+    firstDigit = num / divisor; // Get the first digit
+
+    // Remove the first and last digits from the original number
+    int remainingNum = (num % divisor) / 10;
+
+    // Form the new number with swapped digits
+    swappedNum = lastDigit * divisor + remainingNum * 10 + firstDigit;
+
+    cout << "Number after swapping first and last digits: " << swappedNum << endl;
+
+    
+
+
+    return 0;
+}
+
+
+// F
+// checking if the given number is palindrome or not
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, originalNum, reversedNum = 0, remainder;
+
+    cout << "Enter a number: ";
+    cin >> num;
+
+    originalNum = num;
+
+    // Reverse the number
+    while (num != 0) {
+        remainder = num % 10;
+        reversedNum = reversedNum * 10 + remainder;
+        num /= 10;
+    }
+        cout << "The given number is: " << originalNum << endl;
+    // Check if the original number and the reversed number are the same
+    if (originalNum == reversedNum) {
+        cout << originalNum << " is a palindrome." << endl;
+    } else {
+        cout << originalNum << " is not a palindrome." << endl;
+    }
+
+    return 0;
+}
+
+
+// G
+// finding the frequency of a number
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, digit;
+    int frequency[10] = {0}; // Array to store the frequency of digits 0-9
+
+    cout << "Enter an integer: ";
+    cin >> num;
+
+    // Make a copy of the number
+    int temp = num;
+
+    // Calculate the frequency of each digit
+    while (temp != 0) {
+        digit = temp % 10;
+        frequency[digit]++;
+        temp /= 10;
+    }
+
+    // Print the results in a table format
+    cout << "Digit Frequency" << endl;
+    cout << "----- ---------" << endl;
+    for (int i = 0; i < 10; i++) {
+        cout << "  " << i << "      " << frequency[i] << endl;
+    }
+
+    return 0;
+}
+
+
+// H
+// cheking if the number is strong number
+
+#include <iostream>
+using namespace std;
+
+// Function to calculate factorial of a digit
+int factorial(int n) {
+    int fact = 1;
+    for (int i = 1; i <= n; i++) {
+        fact *= i;
+    }
+    return fact;
+}
+
+int main() {
+    int num, originalNum, digit, sum = 0;
+
+    cout << "Enter a number: ";
+    cin >> num;
+
+    originalNum = num;
+
+    // Calculate the sum of the factorial of each digit
+    while (num != 0) {
+        digit = num % 10;
+        sum += factorial(digit);
+        num /= 10;
+    }
+
+    // Check if the sum of factorials equals the original number
+    if (sum == originalNum) {
+        cout << originalNum << " is a strong number." << endl;
+    } else {
+        cout << originalNum << " is not a strong number." << endl;
+    }
+
+    return 0;
+}
+
+
+// I
+// checking wether a number is perfect number or not
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, sum = 0;
+
+    cout << "Enter a number: ";
+    cin >> num;
+
+    // Calculate the sum of proper divisors
+    for (int i = 1; i <= num / 2; i++) {
+        if (num % i == 0) {
+            sum += i;
+        }
+    }
+
+    // Check if the sum of divisors equals the number
+    if (sum == num) {
+        cout << num << " is a perfect number." << endl;
+    } else {
+        cout << num << " is not a perfect number." << endl;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
