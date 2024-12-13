@@ -129,7 +129,7 @@
   7. End the program
 
 
-## B
+## B)
 # Problem Analysis
 ## Input
  * number
