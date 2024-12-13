@@ -1,1 +1,21 @@
+BEGIN
+    DECLARE n, row, col AS INTEGER
+    SET n = 6 // Fixed size of the pyramid
 
+    FOR row = 1 TO n DO
+        FOR col = 1 TO n - row DO
+            PRINT " "
+        END FOR
+
+        FOR col = 1 TO row DO
+            IF col == 1 OR col == row OR row == n THEN
+                PRINT "* "
+            ELSE
+                PRINT "  "
+            END IF
+        END FOR
+
+        PRINT NEW LINE
+    END FOR
+
+END
