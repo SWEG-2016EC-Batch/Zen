@@ -1,1 +1,73 @@
+BEGIN
+    DECLARE stud_num, j, test, quiz, project, assignment, final_exam, total_mark AS FLOAT
+    DECLARE grade AS STRING
 
+    // Read the number of students
+    PRINT "Enter student number: "
+    INPUT stud_num
+
+    FOR j = 1 TO stud_num DO
+        PRINT "Enter marks for student ", j, ":"
+
+        // Read and validate test mark
+        PRINT "Test (15%): "
+        WHILE NOT (INPUT test) OR test < 0 OR test > 15 DO
+            PRINT "Invalid input. Please enter a valid mark (0-15): "
+            CLEAR INPUT BUFFER
+        END WHILE
+
+        // Read and validate quiz mark
+        PRINT "Quiz (5%): "
+        WHILE NOT (INPUT quiz) OR quiz < 0 OR quiz > 5 DO
+            PRINT "Invalid input. Please enter a valid mark (0-5): "
+            CLEAR INPUT BUFFER
+        END WHILE
+
+        // Read and validate project mark
+        PRINT "Project (20%): "
+        WHILE NOT (INPUT project) OR project < 0 OR project > 20 DO
+            PRINT "Invalid input. Please enter a valid mark (0-20): "
+            CLEAR INPUT BUFFER
+        END WHILE
+
+        // Read and validate assignment mark
+        PRINT "Assignment (10%): "
+        WHILE NOT (INPUT assignment) OR assignment < 0 OR assignment > 10 DO
+            PRINT "Invalid input. Please enter a valid mark (0-10): "
+            CLEAR INPUT BUFFER
+        END WHILE
+
+        // Read and validate final exam mark
+        PRINT "Final Exam (50%): "
+        WHILE NOT (INPUT final_exam) OR final_exam < 0 OR final_exam > 50 DO
+            PRINT "Invalid input. Please enter a valid mark (0-50): "
+            CLEAR INPUT BUFFER
+        END WHILE
+
+        // Calculate total mark
+        total_mark = test + quiz + project + assignment + final_exam
+
+        // Determine letter grade
+        IF total_mark >= 90 THEN
+            grade = "A+"
+        ELSE IF total_mark >= 80 THEN
+            grade = "A"
+        ELSE IF total_mark >= 75 THEN
+            grade = "B+"
+        ELSE IF total_mark >= 60 THEN
+            grade = "B"
+        ELSE IF total_mark >= 55 THEN
+            grade = "C+"
+        ELSE IF total_mark >= 45 THEN
+            grade = "C"
+        ELSE IF total_mark >= 30 THEN
+            grade = "D"
+        ELSE
+            grade = "F"
+        END IF
+
+        PRINT "Total mark for student ", j, ": ", total_mark
+        PRINT "Letter grade for student ", j, ": ", grade
+    END FOR
+
+END
