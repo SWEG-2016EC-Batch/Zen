@@ -79,12 +79,132 @@ int main ()
     cout << "The net salary is: " << netSalary << "br" << endl;
 
 
-
-
-
-
-
-
-
     return 0;
+}
+
+
+
+
+// question number 2
+
+#include <iostream>
+using namespace std;
+// calculating the grade of a student
+
+int main () {
+    // declarint the variables
+
+    float test, quiz, project, assignment, finalExam, totalResult;
+
+cout << "Calcualting the mark and grade." << endl;
+
+            cout << "Enter the test result: ";// prompt the user to enter the test result
+            cin >> test;
+            if ( test >= 0 && test <= 15) // check if the reslut is in the range
+            {
+                cout << test << endl;
+            }
+            else 
+            {
+                cout << "Your input is not in the range of the test.";
+                return 0;
+            }
+                
+            cout << "Enter the quiz result: "; // prompt the user to enter hter quiz result
+            cin >> quiz ;
+            if ( quiz >=0 && quiz <= 5) // check if the quiz is in the range
+            {
+                    cout << quiz << endl;
+            }
+            else
+            {
+                cout << "Your quiz result is not on the range.";
+                return 0;
+            }
+
+            cout << "Enter the project result: "; // prompt the user to enter the project result
+            cin >> project;
+            if ( project >= 0 && project <= 20 ) // check if the project result is on the range
+            {
+                cout << project << endl;
+            }
+            else
+            {
+                cout << "Your project result is not on the range.";
+                return 0;
+            }
+
+            cout << "Enter the assignment result: "; // prompt the user to enter the assignment result
+            cin >> assignment ;
+            if ( assignment >= 0 && assignment <=10 ) // check if the assignment result is in range
+            {
+                cout << assignment << endl;
+            
+            }
+            else 
+            {
+                cout << "Your assignment result is not on the range.";
+                return 0;
+            }
+
+            cout << "Enter the final exam result: "; // prompt the user to enter the final exam result
+            cin >> finalExam ;
+            if ( finalExam >= 0 && finalExam <= 50) // check if it's in the range
+            {
+                cout << finalExam << endl;
+
+            }
+            else
+            {
+                cout << "Your final exam result is not on the range.";
+                return 0;
+            }
+
+            totalResult = test + quiz + project + assignment + finalExam;// calculatint the total result
+            cout << "Your total result is: " << totalResult << endl;
+
+            char grade; // declarint a character variable grade
+
+            // checking the the total result to its correspoing grade letter and print its grade
+
+            if ( totalResult >= 90)
+            {   
+                grade = 'A+';
+                cout << "Your grade is: " << grade << endl;
+            }
+            else if ( totalResult >= 80)
+            {   
+                grade = 'A';
+                cout << "Your grade is: " << grade << endl;
+            }
+            else if ( totalResult >= 75)
+            {   
+                grade = 'B+';
+                cout << "Your grade is: " << grade << endl;
+            }
+            else if ( totalResult >= 60)
+            {   
+                grade = 'B';
+                cout << "Your grade is: " << grade << endl;
+            }
+            else if ( totalResult >= 55)
+            {   
+                grade = 'C+';
+                cout << "Your grade is: " << grade << endl;
+            }
+            else if ( totalResult >= 45)
+            {   
+                grade = 'D';
+                cout << "Your grade is: " << grade << endl;
+            }
+            else 
+            {   
+                grade = 'F';
+                cout << "Your grade is: " << grade << endl;
+            }
+            
+
+
+
+return 0;
 }
