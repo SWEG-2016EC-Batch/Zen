@@ -287,3 +287,87 @@ int main ()
     return 0;
 }
 
+
+// C
+
+// finding the even digig of a number and then its product
+
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int num, product = 1; // declaration and intialization
+    bool hasEven = false;
+
+    cout << "Enter a number: "; // prompt the user to input a number
+    cin >> num;
+
+    if ( num < 0) // checking negative numbrs
+    {
+        num = -num;
+    }
+    while ( num != 0)
+    {
+        int digit = num % 10; // couting a digit
+        // checking if the digit is even
+        if ( digit % 2 == 0 && digit != 0){
+            product *= digit;
+            hasEven = true;
+            cout << digit << ", " ;
+        }
+        num /= 10;
+        
+    }
+    cout << endl;
+    if ( hasEven) {
+        // performig a product on the even digit
+
+        cout << "Product of the even digit: " << product << endl;
+    } else {
+        cout << "No even digit found!";
+    }
+
+    return 0;
+}
+
+
+// D
+
+// printing the first and the last digit of 
+// a number and compute ther sum
+
+# include <iostream>
+using namespace std;
+
+int main ()
+{
+    int num, firstDigit, lastDigit, sum = 0; // declaration
+    cout << "Enter a number: ";
+    cin >> num;
+    
+    lastDigit = num % 10;
+
+    if ( num < 0){
+        num = -num; // consdering negative numbers
+    }
+    while ( num >= 10){
+        num /= 10; // finding the first digit
+    }
+    firstDigit = num;
+
+    sum = firstDigit + lastDigit; // calculatint the sum
+
+    // displaying the first and the last digit
+
+    cout << "The firt and last digits are: " << firstDigit << " and " << lastDigit << endl;
+
+    // displaying the resultS
+    cout << "The sum of the first and the last digit of the number is: " << sum;
+
+
+
+    return 0;
+
+} 
+
