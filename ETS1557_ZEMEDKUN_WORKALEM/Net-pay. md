@@ -1,1 +1,69 @@
 
+BEGIN
+    DECLARE variables: employee_Name, weekly_Hours, bonus_Rate, base_Salary, overtime_Rate, bonus_Payment, gross_Salary, net_Salary, pension, tax, choose
+
+    DO
+        PRINT "Enter employee name: "
+        READ employee_Name
+
+        PRINT "Enter weekly working hours: "
+        WHILE input is invalid OR weekly_Hours < 0
+            PRINT "Invalid input, please enter a positive number for hours: "
+            CLEAR input buffer
+            READ weekly_Hours
+
+        PRINT "Enter bonus rate per hour: "
+        WHILE input is invalid OR bonus_Rate < 0
+            PRINT "Invalid input, please enter a positive number for bonus rate: "
+            CLEAR input buffer
+            READ bonus_Rate
+
+        PRINT "Enter base salary: "
+        WHILE input is invalid OR base_Salary < 0
+            PRINT "Invalid input, please enter a positive number for base salary: "
+            CLEAR input buffer
+            READ base_Salary
+
+        IF weekly_Hours > 40 THEN
+            PRINT "Enter over-time bonus rate per hour: "
+            WHILE input is invalid OR overtime_Rate < 0
+                PRINT "Invalid input, please enter a positive number for over-time bonus rate: "
+                CLEAR input buffer
+                READ overtime_Rate
+
+        SET regular_Hours = MIN(weekly_Hours, 40)
+        SET overtime_Hours = MAX(0, weekly_Hours - 40)
+
+        SET bonus_Payment = (regular_Hours * (bonus_Rate * base_Salary)) + (overtime_Hours * (overtime_Rate * base_Salary))
+        SET gross_Salary = base_Salary + bonus_Payment
+        SET pension = 0.07 * base_Salary
+
+        IF gross_Salary <= 200 THEN
+            SET tax = 0
+        ELSE IF gross_Salary <= 600 THEN
+            SET tax = 0.10 * (gross_Salary - 200)
+        ELSE IF gross_Salary <= 1200 THEN
+            SET tax = 0.10 * 400 + 0.15 * (gross_Salary - 600)
+        ELSE IF gross_Salary <= 2000 THEN
+            SET tax = 0.10 * 400 + 0.15 * 600 + 0.20 * (gross_Salary - 1200)
+        ELSE IF gross_Salary <= 3500 THEN
+            SET tax = 0.10 * 400 + 0.15 * 600 + 0.20 * 800 + 0.25 * (gross_Salary - 2000)
+        ELSE
+            SET tax = 0.10 * 400 + 0.15 * 600 + 0.20 * 800 + 0.25 * 1500 + 0.30 * (gross_Salary - 3500)
+
+        SET net_Salary = gross_Salary - (pension + tax)
+
+        PRINT "Employee Name: ", employee_Name
+        PRINT "Bonus Payment: ", bonus_Payment, " ETB"
+        PRINT "Pension: ", pension, " ETB"
+        PRINT "Gross Salary: ", gross_Salary, " ETB"
+        PRINT "Tax: ", tax, " ETB"
+        PRINT "Net Salary: ", net_Salary, " ETB"
+
+        PRINT "Do you want to calculate again? (y/n): "
+        READ choose
+        CLEAR input buffer
+
+    WHILE choose == 'y' OR choose == 'Y'
+
+END
