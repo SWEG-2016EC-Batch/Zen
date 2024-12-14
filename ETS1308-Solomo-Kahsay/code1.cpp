@@ -551,6 +551,501 @@ int main() {
 
 
 
+// PRINTING PATTERN
+
+// TO PRINT THE GIVEN ORDER IN THE WORK SHEET YOU HAVE TO ENTER
+// THE ROWS AND COLOMUNS BY COUNTING FORM THE PICTURE GIVEN
+
+// A
+// print the 
+
+
+
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int row, col;
+
+            cout << "Enter the row contorl value: ";
+            cin >> row;
+            cout << "Enter the printing control value: ";
+            cin >> col;
+
+
+    for ( int i = 1; i <= row; i++)
+    {
+        for ( int j = 1; j <= col; j++)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+// B 
+
+// printing the alphabets in a rectangular form
+
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int row, col;
+
+            cout << "Enter the row contorl value: ";
+            cin >> row;
+            cout << "Enter the printing control value: ";
+            cin >> col;
+
+    char alphabet = 'A';
+    for ( int i = 1; i <= row; i++)
+    {
+        
+
+        for ( int j = 1; j <= col; j++)
+        {
+            cout << alphabet << " ";
+            alphabet++;
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+// C
+
+// printing a half pramid with a number
+
+# include <iostream>
+
+using namespace std;
+
+int main ()
+
+{
+
+    int row, col;
+
+            cout << "Enter the row contorl value: ";
+            cin >> row;
+            cout << "Enter the printing control value: ";
+            cin >> col;
+
+
+            for ( int i = 1; i <= row; i++)
+    {
+        for ( int j = 1; j <= i; j++)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+// D
+
+// printing the half pramid from the left
+
+# include <iostream>
+
+using namespace std;
+
+int main ()
+{
+
+    int row, col;
+
+            cout << "Enter the row contorl value: ";
+            cin >> row;
+            cout << "Enter the printing control value: ";
+            cin >> col;
+
+
+
+            for ( int i = 1; i <= row; i++)
+        {
+            for ( int k = row - i; k > 0; k--)
+            {
+                cout << "  ";
+            }
+            for ( int j = i; j > 0; j--)
+            {
+                cout <<  j << " " ;
+                
+            }
+            cout << endl;
+        }
+
+    return 0;
+
+}
+
+
+
+
+// E
+
+// printing a half pramid in alphabetic order
+
+
+# include <iostream>
+
+using namespace std;
+
+int main ()
+
+{
+
+    int row, col;
+
+            cout << "Enter the row contorl value: ";
+            cin >> row;
+            cout << "Enter the printing control value: ";
+            cin >> col;
+
+
+            for ( int i = 1; i <= row; i++)
+    {
+            char alphabet = 'A';
+
+        for ( int j = 1; j <= i; j++)
+        {
+            cout << alphabet << " ";
+            alphabet++;
+        }
+        cout << endl;
+    }
+
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+// F
+// 
+
+
+# include <iostream>
+
+using namespace std;
+
+int main ()
+
+{
+
+    int row, col;
+
+            cout << "Enter the row contorl value: ";
+            cin >> row;
+            cout << "Enter the printing control value: ";
+            cin >> col;
+
+            
+    for ( int i = 1; i <= row; i++)
+    {
+        char alphabet = 'a';
+
+        for ( int j = 1; j <= col; j++)
+        {
+            cout << alphabet << " ";
+            alphabet++;
+        }
+        cout << endl;
+    }
+
+    
+
+        return 0;
+}
+
+
+
+
+
+
+
+// G
+// printing a hollow rectangle
+
+# include <iostream>
+
+using namespace std;
+
+int main () 
+{
+    int row, col;
+
+            cout << "Enter the row contorl value: ";
+            cin >> row;
+            cout << "Enter the printing control value: ";
+            cin >> col;
+
+
+            for ( int i = 1; i <= row; i++)
+            {
+                for ( int j = 1; j <= col; j++)
+                {
+                if ( i == 1 || i == row || j == 1 || j == col)
+                {
+                   
+                    cout << "* " ;
+                    
+                }
+                else
+                {
+                    cout << "  ";
+                }
+                } 
+                cout << endl;
+            
+            }
+
+
+    return 0;
+}
+
+
+
+
+
+
+// H
+// printing a half pramid that is inverted
+
+# include <iostream>
+
+using namespace std;
+
+int main () 
+{
+    int row, col;
+
+            cout << "Enter the row contorl value: ";
+            cin >> row;
+            cout << "Enter the printing control value: ";
+            cin >> col;
+
+           for ( int i = row; i > 0; i--)
+           {
+            for ( int j = i; j > 0; j--)
+            {
+                cout << "* ";
+            }
+            cout << endl;
+           }
+
+
+
+    return 0;
+}
+
+
+
+
+// I
+
+// printing a hallow half pramid
+
+
+
+# include <iostream>
+
+using namespace std;
+
+int main () 
+{
+    int row, col;
+
+            cout << "Enter the row contorl value: ";
+            cin >> row;
+            cout << "Enter the printing control value: ";
+            cin >> col;
+
+            
+            for ( int i = row; i > 0; i--)
+            {
+                for ( int j = i; j > 0; j--)
+                {
+                    if ( j == 1 || j == i || i == row)
+                    { 
+                        cout << "* ";
+                    }
+                    else 
+                    {
+                        cout << "  ";
+                    }
+                }
+                cout << endl;
+            }
+
+
+            return 0;
+}
+
+
+
+
+
+
+// J
+
+// printing a full pramid 
+
+
+# include <iostream>
+
+using namespace std;
+
+int main () 
+{
+    int row, col;
+
+            cout << "Enter the row contorl value: ";
+            cin >> row;
+            cout << "Enter the printing control value: ";
+            cin >> col;
+
+
+        
+        for ( int i = row; i > 0; i--)
+            {
+                for ( int k = row - i; k > 0; k--)
+                {
+                    cout << " ";
+                }
+                for ( int j = i; j > 0; j--)
+                {
+                    cout << "* ";
+                }
+                cout << endl;
+            }
+
+
+
+            return 0;
+}
+ 
+
+ 
+
+
+
+
+
+// K
+
+// printing a full inverted pramid
+
+# include <iostream>
+
+using namespace std;
+
+int main () 
+{
+    int row, col;
+
+            cout << "Enter the row contorl value: ";
+            cin >> row;
+            cout << "Enter the printing control value: ";
+            cin >> col;
+
+
+            for ( int i = row; i > 0; i--)
+            {
+                for ( int k = 1; k <= row - i; k++ )
+            {
+                cout << " ";
+            }
+            for ( int j = i; j > 0; j--)
+            {
+                cout << "* ";
+            }
+            cout << endl;
+            }
+
+
+
+            return 0;
+}
+
+// L
+
+// printing a full hallow pramid
+
+# include <iostream>
+
+using namespace std;
+
+int main () 
+{
+    int row, col;
+
+            cout << "Enter the row contorl value: ";
+            cin >> row;
+            cout << "Enter the printing control value: ";
+            cin >> col;
+
+for ( int i = 1; i <= row; i++)
+           {
+            for ( int k = 1; k <= row - i; k++)
+            {
+                cout << "  ";
+            }
+            for ( int j = 1; j <= (2*i - 1); j++)
+            {
+                if ( i == row || j == 1 || j == (2*i  - 1))
+                { cout << "* "; }
+                else { cout << "  "; }
+            }
+            cout << endl;
+            }
+
+
+
+            return 0;
+}
+
+
+
+
+
+
+
 
 
 
