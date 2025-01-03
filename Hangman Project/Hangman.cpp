@@ -1,5 +1,11 @@
+// The hangman game project
+
 #include <iostream>
+#include <string>
+#include <cctype>
+
 using namespace std;
+
 int main()
 {
     int attempt = 10;// Number of attempts allowed
@@ -67,6 +73,146 @@ int main()
                 {
                     attempt--;
                     cout << "Incorrect guess" << endl<<endl;
+
+                    // printing the hanged man pattern by matching the remaing attempts
+                    
+                     switch (attempt)
+                {
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" <<  endl<< endl;
+                    // left with 9 attempts
+                    case 9: cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            break;
+
+                    // lefte with 8 attempts
+                    case 8:
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            cout << "_______" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            break;
+                    // left with 7 attempts
+                    case 7:
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            cout << " _______" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|     O" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            break;
+                    // left with 6 attempts
+                    case 6:
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            cout << " _______" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|     O" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            break;
+                    // lefte with 5 attempts
+                    case 5:
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            cout << " _______" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|     O" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|    /" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            break;
+                    // left with 4 attempts
+                    case 4:
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            cout << " _______" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|     O" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|    /|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            break;
+                    // left with 3 attempts
+                    case 3:
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            cout << " _______" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|     O" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|    /|\\" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            break;
+                    // left with 2 attempts
+                    case 2:
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            cout << " _______" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|     O" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|    /|\\" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|" << endl;
+                            cout << "|" << endl;
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            break;
+                    // left with 1 attempts
+                    case 1:
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            cout << " _______" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|     O" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|    /|\\" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|    / " << endl;
+                            cout << "|" << endl;
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            break;
+                    // run out of attempt
+                    default:
+                            cout << endl << "Sorry you ran out of attempts. The word was: " <<inputWord<<endl << endl;
+                            cout << "***********************************************************************" << endl;
+                            cout << "***********************************************************************" << endl << endl;
+                            cout << "**********YOU COULD NOT SAVE THE MAN FROM HANGING**********"<< endl<< endl;
+                            cout << " _______" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|     O" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|    /|\\" << endl;
+                            cout << "|     |" << endl;
+                            cout << "|    / \\" << endl;
+                            cout << "|" << endl;
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
+                            cout << "***********************************************************************" << endl;
+                            cout << "***********************************************************************" << endl;
+                            break;
+                }
                 }
 cout<<endl;
 
@@ -75,6 +221,23 @@ cout<<endl;
                 {
                     cout << "\nCongratulations, you have found the word: " << inputWord << endl<<endl;
                     wordGuessed = true;
+                    cout << "***********************************************************************" << endl;
+                    cout << "***********************************************************************" << endl << endl;
+
+
+                    cout << "********** YOU SAVED THE MAN FROM HANGING  **********" << endl;
+
+                    cout << " _______" << endl;
+                    cout << "|       " << endl;
+                    cout << "|       " << endl;
+                    cout << "|     O " << endl;
+                    cout << "|     | " << endl;
+                    cout << "|    /|\\" << endl;
+                    cout << "|     |" << endl;
+                    cout << "|    / \\" << endl;
+                    cout << "***********************************************************************" << endl;
+                    cout << "***********************************************************************" << endl;
+
                 }
 
 
