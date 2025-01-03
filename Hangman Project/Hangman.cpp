@@ -36,8 +36,16 @@ int main()
                 cout << "Remaining attempts: " << attempt << endl;// Show remaining attempts
                 cout << name[(j + 1) % 2] << ", please enter your guess: ";// Prompt for guess
                 cin >> guess;// Read player's guess
-
-
+//Check whether the input is single alphabetic character or not
+          if (!isalpha(guess[0]) || guess.length() != 1) {
+                    cout << "Please enter only a single alphabet." << endl << endl;
+                    continue;
+                }
+//Check if the letter is previously entered or not
+                if (guessedLetters.find(tolower(guess[0])) != string::npos) {
+                    cout << "You have already guessed that letter!" << endl << endl;
+                    continue;
+                }
 
         // Record the guessed letter
                 guessedLetters += tolower(guess[0]);
