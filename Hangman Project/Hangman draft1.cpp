@@ -4,6 +4,10 @@ int main()
 {
     int attempt = 10;// Number of attempts allowed
     string guessedLetters, inputWord, secretWord, guess;
+    int round = 0; // initializing round from zero to ask players to continue game
+    char choice;
+    string category; // for giving hint to guessser
+    bool continuegame = true; // initializing the continuation of game as true
     string name[2];// Array to store player names
 
     // Input player names
@@ -12,8 +16,11 @@ int main()
     cout << "Enter the name of player 2: ";
     cin >> name[1];
 
-     // Player 1 inputs the word for Player 2 to guess
-            cout << endl << name[0] << ": Enter the word for " << name[1] << ": ";
+      do {
+        for (int j = 0; j < 2; j++) { // initialize j from 0 to make it work for 2 player itterating until 2
+            cout<<endl << name [j] << ": Enter the category of the word: ";
+            cin>>category; // helps giving hint 
+            cout << endl << name[j] << ": Enter the word for " << name[(j + 1) % 2] << ": "; // asks to input word for the other player
             cin >> inputWord;
 
      // Initialize secret word with underscores
@@ -26,9 +33,10 @@ int main()
             while (attempt > 0 && secretWord != inputWord)
             {
                 cout << "Word: " << secretWord << endl;
-                cout << name[1] << ", please enter your guess: ";// Prompt for guess
-                cin >> guess;// Read player's guess
                 cout << "Remaining attempts: " << attempt << endl;// Show remaining attempts
+                cout << name[(j + 1) % 2] << ", please enter your guess: ";// Prompt for guess
+                cin >> guess;// Read player's guess
+                
               
                 
         // Record the guessed letter
@@ -65,6 +73,18 @@ cout<<endl;
                 if (attempt ==0 ){
                     cout<<" Sorry you ran out of attempts. The word was: "<< inputWord <<endl;
                 }
+                
+            }
+            round++;
+            if (round % 2 == 0) {
+            cout << "Do you want to continue the game? (y/n): ";
+            cin >> choice;
+            if (choice != 'Y' && choice != 'y') { // if it's not y or Y go out of the loop 
+                continuegame = false;
+            }
+        }
+       
 }
+           }while (continuegame); // while the bool continuegame is true
              return 0;
 }
