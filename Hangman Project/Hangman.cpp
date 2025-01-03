@@ -25,10 +25,13 @@ int main()
 
       do {
         for (int j = 0; j < 2; j++) { // initialize j from 0 to make it work for 2 player iterating until 2
+            cin.ignore(); // this will help to clear the input buffer
             cout<<endl << name [j] << ": Enter the category of the word: ";
-            cin>>category; // helps giving hint
+            getline(cin,category);
             cout << endl << name[j] << ": Enter the word for " << name[(j + 1) % 2] << ": "; // asks to input word for the other player
             cin >> inputWord;
+            system("cls");
+            cout<<"The Catagory is: "<<category<<endl;
             bool wordGuessed = false; // Tracks whether the word has been completely guessed; used for updating player scores including how many times they played as guesser
             secretWord = string(inputWord.length(), '_');   // Initialize secret word with underscores
             attempt = 10;//Reset attempts
