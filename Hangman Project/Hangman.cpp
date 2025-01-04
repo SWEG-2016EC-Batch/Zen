@@ -19,17 +19,23 @@ int main()
 
     // Input player names
     cout << "Enter the name of player 1: ";
-    cin >> name[0];
+     getline(cin, name[0]);
     cout << "Enter the name of player 2: ";
-    cin >> name[1];
+     getline(cin, name[1]);
 
       do {
         for (int j = 0; j < 2; j++) { // initialize j from 0 to make it work for 2 player iterating until 2
-            cin.ignore(); // this will help to clear the input buffer
             cout<<endl << name [j] << ": Enter the category of the word: ";
             getline(cin,category);
+            label:
             cout << endl << name[j] << ": Enter the word for " << name[(j + 1) % 2] << ": "; // asks to input word for the other player
             cin >> inputWord;
+              for (int i = 0; i < inputWord.length(); i++) {
+                    if (!isalpha(inputWord[i])) {
+                        cout << "Please enter only letters." << endl;
+                        goto label;// this will reverse us back to the label place if the input isn't letter
+                    }
+             }
             system("cls");
             cout<<"The Catagory is: "<<category<<endl;
             bool wordGuessed = false; // Tracks whether the word has been completely guessed; used for updating player scores including how many times they played as guesser
