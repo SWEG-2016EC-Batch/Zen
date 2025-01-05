@@ -36,6 +36,7 @@ int main()
                         goto label;// this will reverse us back to the label place if the input isn't letter
                     }
              }
+            cin.ignore();
             system("cls");
             cout<<"The Catagory is: "<<category<<endl;
             bool wordGuessed = false; // Tracks whether the word has been completely guessed; used for updating player scores including how many times they played as guesser
@@ -50,7 +51,7 @@ int main()
                 cout << "Word: " << secretWord << endl;
                 cout << "Remaining attempts: " << attempt << endl;// Show remaining attempts
                 cout << name[(j + 1) % 2] << ", please enter your guess: ";// Prompt for guess
-                cin >> guess;// Read player's guess
+                getline(cin,guess);// Read player's guess
 //Check whether the input is single alphabetic character or not
           if (!isalpha(guess[0]) || guess.length() != 1) {
                     cout << "Please enter only a single alphabet." << endl << endl;
@@ -87,9 +88,11 @@ int main()
                     
                      switch (attempt)
                 {
-                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" <<  endl<< endl;
+                            
                     // left with 9 attempts
-                    case 9: cout << "|" << endl;
+                    case 9: 
+                            cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" <<  endl<< endl;
+                            cout << "|" << endl;
                             cout << "|" << endl;
                             cout << "|" << endl;
                             cout << "|" << endl;
@@ -205,10 +208,10 @@ int main()
                             break;
                     // run out of attempt
                     default:
-                            cout << endl << "Sorry you ran out of attempts. The word was: " <<inputWord<<endl << endl;
+                            cout << endl << "Sorry you ran out of attempts. The word was " <<inputWord<<endl << endl;
                             cout << "***********************************************************************" << endl;
                             cout << "***********************************************************************" << endl << endl;
-                            cout << "**********YOU COULD NOT SAVE THE MAN FROM HANGING**********"<< endl<< endl;
+                            cout << "********** YOU COULD NOT SAVE THE MAN FROM HANGING **********"<< endl<< endl;
                             cout << " _______" << endl;
                             cout << "|     |" << endl;
                             cout << "|     O" << endl;
@@ -250,11 +253,6 @@ cout<<endl;
                 }
 
 
-        // Check for loss condition
-                if (attempt ==0 ){
-                    cout<<"Sorry you ran out of attempts. The word was: "<< inputWord <<endl<<endl;
-                }
-
             }
             if (wordGuessed)
             {
@@ -269,6 +267,7 @@ cout<<endl;
             if (round % 2 == 0) {
             cout << "Do you want to continue the game? (y/n): ";
             cin >> choice;
+            cin.ignore();
             if (choice != 'Y' && choice != 'y') { // if it's not y or Y go out of the loop
                 continuegame = false;
             }
