@@ -36,7 +36,7 @@ int main()
                         goto label;// this will reverse us back to the label place if the input isn't letter
                     }
              }
-            cin.ignore();
+            cin.ignore(); // Clear the newline character from the input buffer
             system("cls");
             cout<<"The Catagory is: "<<category<<endl<<endl;
             bool wordGuessed = false; // Tracks whether the word has been completely guessed; used for updating player scores including how many times they played as guesser
@@ -267,7 +267,7 @@ cout<<endl;
             if (round % 2 == 0) {
             cout << "Do you want to continue the game? (y/n): ";
             cin >> choice;
-            cin.ignore();
+            cin.ignore(); // Clear the newline character from the input buffer
             if (choice != 'Y' && choice != 'y') { // if it's not y or Y go out of the loop
                 continuegame = false;
             }
