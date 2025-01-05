@@ -38,7 +38,7 @@ int main()
              }
             cin.ignore();
             system("cls");
-            cout<<"The Catagory is: "<<category<<endl;
+            cout<<"The Catagory is: "<<category<<endl<<endl;
             bool wordGuessed = false; // Tracks whether the word has been completely guessed; used for updating player scores including how many times they played as guesser
             secretWord = string(inputWord.length(), '_');   // Initialize secret word with underscores
             attempt = 10;//Reset attempts
