@@ -102,7 +102,7 @@ int main()
                             cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
                             break;
 
-                    // lefte with 8 attempts
+                    // left with 8 attempts
                     case 8:
                             cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
                             cout << "_______" << endl;
@@ -141,7 +141,7 @@ int main()
                             cout << "|" << endl;
                             cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
                             break;
-                    // lefte with 5 attempts
+                    // left with 5 attempts
                     case 5:
                             cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl<< endl;
                             cout << " _______" << endl;
