@@ -17,12 +17,14 @@ int main()
     bool continuegame = true; // initializing the continuation of game as true
     string name[2];// Array to store player names
 
-    // Input player names
+   
     cout << "###############################################" << endl;
     cout << "###############################################" << endl << endl;
         cout << "WELCOME TO MULTIPLAYER HANGMAN GAME!" << endl << endl;
     cout << "###############################################" << endl;
-      cout << "###############################################" << endl;
+    cout << "###############################################" << endl;
+
+     // Input player names
     cout << "Enter the name of player 1: ";
      getline(cin, name[0]);
     cout << "Enter the name of player 2: ";
